@@ -1,0 +1,67 @@
+.otherComponenets {
+    background-color: #e8e73f;
+}
+
+.alkallMetals {
+    background-color: #efc130;
+}
+
+.transitionMetals {
+    background-color: #2d81bd;
+}
+
+.post-transitionMetals {
+    background-color: #304057;
+}
+
+.metaloids {
+    background-color: #7b8890;
+}
+
+.alkalineEarthMetals {
+    background-color: #eb7f34;
+} 
+
+.nobleGases {
+    background-color: #8a60a8;
+}
+
+.halogens {
+    background-color: #3b95d3;
+}
+
+.lanthanoids {
+    background-color: #ef5648;
+}
+
+.actnoids {
+    background-color: #57b948;
+}
+
+.pt-cell {
+    width:80px;
+    height: 90px;
+    color: #fff;
+}
+
+.cellNumb {
+    font-size:0.75em;
+    margin:0;
+    padding-left:5px;
+    color: #fff;
+}
+
+.elementLetters {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin:0;
+    padding: 0;
+    color: #fff;
+}
+
+.elementInfo{
+    font-size: 0.6em;
+    margin:0;
+    padding:0;
+    color: #fff;
+}

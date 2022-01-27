@@ -1,33 +1,9 @@
 <table class="Periodic Table">
     <tbody>
-        <tr>
-            <td *ngFor="">
-                <div class="pt-cell otherComponenets">
-                    <p>number</p>
-
-                    <h1>Element</h1>
-
-                    <p>Value</p>
-                    <p>Name</p>
-                </div>
+        <tr *ngFor="let atom of atoms">
+            <td>
+                <app-table-cell></app-table-cell>
             </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
         </tr>
     </tbody>
 </table>
