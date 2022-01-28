@@ -39,10 +39,29 @@
 }
 
 .pt-cell {
-    width:50px;
-    height: 50px;
+    width:80px;
+    height: 90px;
+    color: #fff;
 }
 
-td {
-    padding: 0.15rem;
+.cellNumb {
+    font-size:0.75em;
+    margin:0;
+    padding-left:5px;
+    color: #fff;
+}
+
+.elementLetters {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin:0;
+    padding: 0;
+    color: #fff;
+}
+
+.elementInfo{
+    font-size: 0.6em;
+    margin:0;
+    padding:0;
+    color: #fff;
 }

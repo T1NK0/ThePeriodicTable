@@ -10,7 +10,7 @@ import { AtomsService } from '../services/atoms.service';
 export class PeriodicTableComponent implements OnInit {
 
   atoms: Atom[] = [];
-
+  period: Atom[] = [];
 
   //Calls our AtomsService, we need to get the atoms from the URL.
   //Constructor gets run multiple times, where as ngOnInit get runned once.
@@ -18,24 +18,26 @@ export class PeriodicTableComponent implements OnInit {
 
   //get's runned once.
   ngOnInit(): void {
-            //Run our getAtoms service.
-            this.AtomsService.getAtoms().subscribe(periodicTableData => {
-              //sets our api data as "periodicTabelData", which we can make a for loop on, to look at each record in the json file.
-                for(let dataAtom of periodicTableData) {
-                  //Create a new atom from our atom class
-                  let atom = new Atom ();
-                    atom.atomicMass = dataAtom.atomicMass;
-                    atom.number = dataAtom.number;
-                    atom.name = dataAtom.name;
-                    atom.symbol = dataAtom.symbol;
-                    atom.group = dataAtom.group;
-                    atom.period = dataAtom.period;
-                    atom.xpos = dataAtom.xpos;
-                    atom.ypos = dataAtom.ypos;
-                    this.atoms.push(atom);
-                  }
-                }
-              )
-    }
+    //Run our getAtoms service.
+    this.AtomsService.getAtoms().subscribe(periodicTableAtoms => {
+      //sets our api data as "periodicTabelData", which we can make a for loop on, to look at each record in the json file.
+      for (let dataAtom of periodicTableAtoms) {
+        //Create a new atom from our atom class
+        let atom = new Atom();
+        atom.atomicMass = dataAtom.atomicMass;
+        atom.number = dataAtom.number;
+        atom.name = dataAtom.name;
+        atom.symbol = dataAtom.symbol;
+        atom.group = dataAtom.group;
+        atom.period = dataAtom.period;
+        atom.xpos = dataAtom.xpos;
+        atom.ypos = dataAtom.ypos;
+        this.atoms.push(atom);
+      }
+    })
+  }
+
+  private sortAtomsToPeriods(){
 
   }
+}
