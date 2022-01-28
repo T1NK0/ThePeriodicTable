@@ -12,17 +12,6 @@ import { AtomsService } from '../services/atoms.service';
 export class PeriodicTableComponent implements OnInit {
 
   atoms: Atom[] = [];
-  period1: Atom[] = [];
-  period2: Atom[] = [];
-  period3: Atom[] = [];
-  period4: Atom[] = [];
-  period5: Atom[] = [];
-  period6: Atom[] = [];
-  period7: Atom[] = [];
-  period8: Atom[] = [];
-  period9: Atom[] = [];
-  period10: Atom[] = [];
-  periods: Atom[] = [];
   tableData: Period[] = [];
 
   //Calls our AtomsService, we need to get the atoms from the URL.

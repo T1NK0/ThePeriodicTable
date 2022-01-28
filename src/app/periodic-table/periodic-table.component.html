@@ -1,19 +1,19 @@
-<table class="Table">
-    <thead>
-        <th></th>
-    </thead>
+<table class="table-data">
     <tbody>
-        <!-- FOR LOOP FOR THE PERIODS -->
-        <!-- <div *ngFor="let period of periods"> -->
-            <!-- FOR LOOP FOR THE PERIODS CELLS -->
-            <!-- <div *ngFor="let atom of Period.atoms"> -->
-                <div *ngFor="let period of tableData">
-                    <div *ngFor="let atom of period.atoms">
-                        <app-table-cell></app-table-cell>
+        <div *ngFor="let period of tableData">
+            <tr>
+                <td *ngFor="let atom of period.atoms">
+                    <div>
+                        <div class="pt-cell otherComponenets">
+                            <p class="cellNumb">{{atom.number}}</p>
+                            <h1 class="elementLetters text-center">{{atom.symbol}}</h1>
+                            <p class="elementInfo text-center">{{atom.atomicMass}}</p>
+                            <p class="elementInfo text-center">{{atom.name}}</p>
+                        </div>
+                        <!-- <app-table-cell></app-table-cell> -->
                     </div>
-                </div>
-                
-            <!-- </div> -->
-        <!-- </div> -->
+                </td>
+            </tr>
+        </div>
     </tbody>
 </table>

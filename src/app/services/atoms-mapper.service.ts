@@ -34,18 +34,18 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
           //Since period 6 contains an extra tabel row, we need to sort them out of the ones we add to this row.
           //We know it's the values 57 to 71, so we gotta sort within those numbers to the other array.
           if (atom.number >= 57 && atom.number <= 71) {
-            mappingResult[5].atoms.push(atom);
-          } else {
             mappingResult[8].atoms.push(atom);
+          } else {
+            mappingResult[5].atoms.push(atom);
           }
           break;
         case 7:
           //Since period 6 contains an extra tabel row, we need to sort them out of the ones we add to this row.
           //We know it's the values 89 to 103, so we gotta sort within those numbers to the other array.
-          if (atom.number <= 89 && atom.number >= 103) {
-            mappingResult[6].atoms.push(atom);
-          } else {
+          if (atom.number >= 89 && atom.number <= 103) {
             mappingResult[9].atoms.push(atom);
+          } else {
+            mappingResult[6].atoms.push(atom);
           }
           break;
       }
