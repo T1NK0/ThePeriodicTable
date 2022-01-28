@@ -49,7 +49,7 @@ export class PeriodicTableComponent implements OnInit {
         this.atoms.push(atom);
       }
       
-      this.sortAtomsToPeriods.assignAtomsToPeriods(this.atoms);
+      this.tableData = this.sortAtomsToPeriods.assignAtomsToPeriods(this.atoms);
     })
   }
 

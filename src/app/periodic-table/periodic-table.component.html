@@ -7,7 +7,12 @@
         <!-- <div *ngFor="let period of periods"> -->
             <!-- FOR LOOP FOR THE PERIODS CELLS -->
             <!-- <div *ngFor="let atom of Period.atoms"> -->
-                <app-table-cell></app-table-cell>
+                <div *ngFor="let period of tableData">
+                    <div *ngFor="let atom of period.atoms">
+                        <app-table-cell></app-table-cell>
+                    </div>
+                </div>
+                
             <!-- </div> -->
         <!-- </div> -->
     </tbody>
