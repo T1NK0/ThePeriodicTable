@@ -1,5 +1,14 @@
-<table class="Periodic Table">
+<table class="Table">
+    <thead>
+        <th></th>
+    </thead>
     <tbody>
-        <app-table-cell></app-table-cell>
+        <div *ngFor="let atom of atoms">
+            <tr>
+                <td>
+                    <app-table-cell></app-table-cell>
+                </td>
+            </tr>
+        </div>
     </tbody>
 </table>
