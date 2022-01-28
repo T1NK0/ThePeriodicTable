@@ -1,5 +1,6 @@
 export class Atom {
-    "number":   number;
+    //Sets our Atom class to use the following parameters.
+    "number":         number;
     "symbol":         string;
     "atomicMass":     number;
     "name":           string;

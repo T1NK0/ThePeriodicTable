@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Atom } from '../Atom';
 import { Period } from '../period';
+import { AtomsMapperService } from '../services/atoms-mapper.service';
 import { AtomsService } from '../services/atoms.service';
 
 @Component({
@@ -26,7 +27,7 @@ export class PeriodicTableComponent implements OnInit {
 
   //Calls our AtomsService, we need to get the atoms from the URL.
   //Constructor gets run multiple times, where as ngOnInit get runned once.
-  constructor(private AtomsService: AtomsService) { }
+  constructor(private AtomsService: AtomsService, private sortAtomsToPeriods:AtomsMapperService ) { }
 
   //get's runned once.
   ngOnInit(): void {
@@ -47,47 +48,9 @@ export class PeriodicTableComponent implements OnInit {
         atom.ypos = dataAtom.ypos;
         this.atoms.push(atom);
       }
-
-      complete:
-      this.sortAtomsToPeriods(this.atoms);
+      
+      this.sortAtomsToPeriods.assignAtomsToPeriods(this.atoms);
     })
   }
-
-  private sortAtomsToPeriods(atoms: Atom[]) {
-    for (let atom of atoms) {
-      switch (atom.ypos) {
-        case 1:
-          this.period1.push(atom);
-          break;
-        case 2:
-          this.period2.push(atom);
-          break;
-        case 3:
-          this.period3.push(atom);
-          break;
-        case 4:
-          this.period4.push(atom);
-          break;
-        case 5:
-          this.period5.push(atom);
-          break;
-        case 6:
-          this.period6.push(atom);
-          break;
-        case 7:
-          this.period7.push(atom);
-          break;
-        case 8:
-          // Contains nothing so we don't have anything in he array 
-          break;
-        case 9:
-          this.period9.push(atom);
-          break;
-        case 10:
-          this.period10.push(atom);
-          break;
-      }
-    }
-  };
 
 }
