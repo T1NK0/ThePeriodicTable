@@ -8,7 +8,7 @@ import { Atom } from '../Atom';
 })
 export class AtomsService {
 
-  dataUrl = 'https://periodic-table-elements-info.herokuapp.com/elements';
+  dataUrl = './assets/data/data.json';
 
   constructor(private http:HttpClient) { }
 
