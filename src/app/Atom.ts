@@ -2,7 +2,7 @@ export class Atom {
     //Sets our Atom class to use the following parameters.
     "number":         number;
     "symbol":         string;
-    "atomicMass":     number;
+    "atomic_mass":     number;
     "name":           string;
     "category":       string;
     "group":          number;
@@ -11,6 +11,6 @@ export class Atom {
     "ypos":           number;
 
     constructor() {
-        
+
     }
 }

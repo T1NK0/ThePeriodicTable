@@ -27,7 +27,7 @@ export class PeriodicTableComponent implements OnInit {
       for (let dataAtom of periodicTableAtoms) {
         //Create a new atom from our atom class
         let atom = new Atom();
-        atom.atomicMass = dataAtom.atomicMass;
+        atom.atomic_mass = dataAtom.atomic_mass;
         atom.number = dataAtom.number;
         atom.name = dataAtom.name;
         atom.symbol = dataAtom.symbol;

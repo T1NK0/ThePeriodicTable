@@ -1,16 +1,12 @@
 <table class="table-data">
     <tbody>
-        <div *ngFor="let period of tableData; index as periodIndex">
-            <tr>
-                <td *ngFor="let atom of period.atoms; index as atomIndex">
-                    <!-- Send our atom into our app-table-cell via injectible so we can print our table-cell -->
-                    <app-table-cell [Atom]="atom">
-                    </app-table-cell>
-
-                    <!-- <td *ngIf="period.period == 1 && period.atoms[index] == 1" colspan="16"></td> -->
-                    <!-- <td *ngIf="period.period == 2 && atom.number == 4 || period.period == 3 && atom.number == 4" colspan="10"></td> -->
-                </td>
-            </tr>
-        </div>
+        <tr *ngFor="let period of tableData; index as periodIndex">
+            <!-- if  -->
+            <td *ngFor="let atom of period.atoms; index as atomIndex"
+                [attr.colspan]="atom.symbol == '' ? 19 - period.atoms.length : 0 ">
+                <app-table-cell [Atom]="atom">
+                </app-table-cell>
+            </td>
+        </tr>
     </tbody>
 </table>

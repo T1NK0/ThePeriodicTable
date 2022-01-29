@@ -1,28 +1,28 @@
-.otherComponenets {
+.diatomic.nonmetal {
     background-color: #e8e73f;
 }
 
-.alkaliMetals {
+.alkali.metal {
     background-color: #efc130;
 }
 
-.transitionMetals {
+.transition.metal {
     background-color: #2d81bd;
 }
 
-.post-transitionMetals {
+.post-transition.metal {
     background-color: #304057;
 }
 
-.metaloids {
+.metalloid {
     background-color: #7b8890;
 }
 
-.alkalineEarthMetals {
+.alkaline.earth.metal {
     background-color: #eb7f34;
 } 
 
-.nobleGases {
+.noble.gas {
     background-color: #8a60a8;
 }
 
@@ -30,11 +30,11 @@
     background-color: #3b95d3;
 }
 
-.lanthanoids {
+.lanthanide {
     background-color: #ef5648;
 }
 
-.actnoids {
+.actinide {
     background-color: #57b948;
 }
 

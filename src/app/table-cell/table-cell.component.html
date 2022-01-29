@@ -1,16 +1,6 @@
-<div class="pt-cell" [ngClass]="{
-    'otherComponenets':atom.category==='diatomic nonmetal', 
-    'alkaliMetals':atom.category==='alkali metal',
-    'transitionMetals':atom.category==='transition metal',
-    'post-transitionMetals':atom.category==='post-transition metal',
-    'metaloids':atom.category==='metalloid',
-    'alkalineEarthMetals':atom.category==='alkaline earth metal',
-    'nobleGases':atom.category==='noble gas',
-    'lanthanoids':atom.category==='lanthanide',
-    'actnoids':atom.category==='actinide'
-}">
+<div class="pt-cell" [ngClass]="atom.category" *ngIf="atom.symbol">
     <p class="cellNumb">{{atom.number}}</p>
     <h1 class="elementLetters text-center">{{atom.symbol}}</h1>
-    <p class="elementInfo text-center">{{atom.atomicMass}}</p>
+    <p class="elementInfo text-center">{{atom.atomic_mass}}</p>
     <p class="elementInfo text-center">{{atom.name}}</p>
 </div>

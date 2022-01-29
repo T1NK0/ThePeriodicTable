@@ -17,12 +17,51 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
         case 1:
           //Calls our mappingResult which is a period. Therefor we need to look at the result 
           mappingResult[0].atoms.push(atom);
+          if (atom.number == 1) {
+            let LanthanideAtom = new Atom();
+            LanthanideAtom.atomic_mass = NaN;
+            LanthanideAtom.number = NaN;
+            LanthanideAtom.name = '';
+            LanthanideAtom.symbol = "";
+            LanthanideAtom.category = '';
+            LanthanideAtom.group = NaN;
+            LanthanideAtom.period = NaN;
+            LanthanideAtom.xpos = NaN;
+            LanthanideAtom.ypos = NaN;
+            mappingResult[0].atoms.push(LanthanideAtom);           
+          }
           break;
         case 2:
           mappingResult[1].atoms.push(atom);
+          if (atom.number == 4) {
+            let LanthanideAtom = new Atom();
+            LanthanideAtom.atomic_mass = NaN;
+            LanthanideAtom.number = NaN;
+            LanthanideAtom.name = '';
+            LanthanideAtom.symbol = "";
+            LanthanideAtom.category = '';
+            LanthanideAtom.group = NaN;
+            LanthanideAtom.period = NaN;
+            LanthanideAtom.xpos = NaN;
+            LanthanideAtom.ypos = NaN;
+            mappingResult[1].atoms.push(LanthanideAtom);           
+          }
           break;
         case 3:
           mappingResult[2].atoms.push(atom);
+          if (atom.number == 12) {
+            let LanthanideAtom = new Atom();
+            LanthanideAtom.atomic_mass = NaN;
+            LanthanideAtom.number = NaN;
+            LanthanideAtom.name = '';
+            LanthanideAtom.symbol = "";
+            LanthanideAtom.category = '';
+            LanthanideAtom.group = NaN;
+            LanthanideAtom.period = NaN;
+            LanthanideAtom.xpos = NaN;
+            LanthanideAtom.ypos = NaN;
+            mappingResult[2].atoms.push(LanthanideAtom);           
+          }
           break;
         case 4:
           mappingResult[3].atoms.push(atom);
@@ -40,7 +79,7 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
           }
           if (atom.number== 56) {
             let LanthanideAtom = new Atom();
-            LanthanideAtom.atomicMass = NaN;
+            LanthanideAtom.atomic_mass = NaN;
             LanthanideAtom.number = 5771;
             LanthanideAtom.name = 'Lanthanide';
             LanthanideAtom.symbol = "La-Lu";
@@ -62,7 +101,7 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
           }
           if (atom.number== 89) {
               let LanthanideAtom = new Atom();
-              LanthanideAtom.atomicMass = NaN;
+              LanthanideAtom.atomic_mass = NaN;
               LanthanideAtom.number = 89103;
               LanthanideAtom.name = 'Actinide';
               LanthanideAtom.symbol = "Ac-Lr";
