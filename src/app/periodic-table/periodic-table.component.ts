@@ -31,6 +31,7 @@ export class PeriodicTableComponent implements OnInit {
         atom.number = dataAtom.number;
         atom.name = dataAtom.name;
         atom.symbol = dataAtom.symbol;
+        atom.category = dataAtom.category;
         atom.group = dataAtom.group;
         atom.period = dataAtom.period;
         atom.xpos = dataAtom.xpos;

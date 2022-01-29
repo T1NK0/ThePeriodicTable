@@ -4,8 +4,13 @@ export class Atom {
     "symbol":         string;
     "atomicMass":     number;
     "name":           string;
+    "category":       string;
     "group":          number;
     "period":         number;
     "xpos":           number;
     "ypos":           number;
+
+    constructor() {
+        
+    }
 }

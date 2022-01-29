@@ -38,6 +38,19 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
           } else {
             mappingResult[5].atoms.push(atom);
           }
+          if (atom.number== 56) {
+            let LanthanideAtom = new Atom();
+            LanthanideAtom.atomicMass = NaN;
+            LanthanideAtom.number = 5771;
+            LanthanideAtom.name = 'Lanthanide';
+            LanthanideAtom.symbol = "La-Lu";
+            LanthanideAtom.category = 'lanthanide';
+            LanthanideAtom.group = NaN;
+            LanthanideAtom.period = NaN;
+            LanthanideAtom.xpos = NaN;
+            LanthanideAtom.ypos = NaN;
+            mappingResult[5].atoms.push(LanthanideAtom);           
+        }
           break;
         case 7:
           //Since period 6 contains an extra tabel row, we need to sort them out of the ones we add to this row.
@@ -46,6 +59,19 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
             mappingResult[9].atoms.push(atom);
           } else {
             mappingResult[6].atoms.push(atom);
+          }
+          if (atom.number== 89) {
+              let LanthanideAtom = new Atom();
+              LanthanideAtom.atomicMass = NaN;
+              LanthanideAtom.number = 89103;
+              LanthanideAtom.name = 'Actinide';
+              LanthanideAtom.symbol = "Ac-Lr";
+              LanthanideAtom.category = 'actinide';
+              LanthanideAtom.group = NaN;
+              LanthanideAtom.period = NaN;
+              LanthanideAtom.xpos = NaN;
+              LanthanideAtom.ypos = NaN;
+              mappingResult[6].atoms.push(LanthanideAtom);           
           }
           break;
       }

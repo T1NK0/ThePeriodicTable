@@ -1,17 +1,14 @@
 <table class="table-data">
     <tbody>
-        <div *ngFor="let period of tableData">
+        <div *ngFor="let period of tableData; index as periodIndex">
             <tr>
-                <td *ngFor="let atom of period.atoms">
-                    <div>
-                        <div class="pt-cell otherComponenets">
-                            <p class="cellNumb">{{atom.number}}</p>
-                            <h1 class="elementLetters text-center">{{atom.symbol}}</h1>
-                            <p class="elementInfo text-center">{{atom.atomicMass}}</p>
-                            <p class="elementInfo text-center">{{atom.name}}</p>
-                        </div>
-                        <!-- <app-table-cell></app-table-cell> -->
-                    </div>
+                <td *ngFor="let atom of period.atoms; index as atomIndex">
+                    <!-- Send our atom into our app-table-cell via injectible so we can print our table-cell -->
+                    <app-table-cell [Atom]="atom">
+                    </app-table-cell>
+
+                    <!-- <td *ngIf="period.period == 1 && period.atoms[index] == 1" colspan="16"></td> -->
+                    <!-- <td *ngIf="period.period == 2 && atom.number == 4 || period.period == 3 && atom.number == 4" colspan="10"></td> -->
                 </td>
             </tr>
         </div>
