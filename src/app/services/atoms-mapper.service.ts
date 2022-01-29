@@ -18,19 +18,19 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
           //Calls our mappingResult which is a period. Therefor we need to look at the result 
           mappingResult[0].atoms.push(atom);
           if (atom.number == 1) {
-            this.newMethod(mappingResult, atom.period);           
+            this.createEmtpyAtom(mappingResult, atom.period);           
           }
           break;
         case 2:
           mappingResult[1].atoms.push(atom);
           if (atom.number == 4) {
-            this.newMethod(mappingResult, atom.period);       
+            this.createEmtpyAtom(mappingResult, atom.period);       
           }
           break;
         case 3:
           mappingResult[2].atoms.push(atom);
           if (atom.number == 12) {
-            this.newMethod(mappingResult, atom.period);       
+            this.createEmtpyAtom(mappingResult, atom.period);       
           }
           break;
         case 4:
@@ -48,17 +48,17 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
             mappingResult[5].atoms.push(atom);
           }
           if (atom.number== 56) {
-            let LanthanideAtom = new Atom();
-            LanthanideAtom.atomic_mass = NaN;
-            LanthanideAtom.number = 57.71;
-            LanthanideAtom.name = 'Lanthanide';
-            LanthanideAtom.symbol = "La-Lu";
-            LanthanideAtom.category = 'lanthanide';
-            LanthanideAtom.group = NaN;
-            LanthanideAtom.period = NaN;
-            LanthanideAtom.xpos = NaN;
-            LanthanideAtom.ypos = NaN;
-            mappingResult[5].atoms.push(LanthanideAtom);           
+            let actinideAtom = new Atom();
+            actinideAtom.atomic_mass = NaN;
+            actinideAtom.number = 57.71;
+            actinideAtom.name = 'Lanthanide';
+            actinideAtom.symbol = "La-Lu";
+            actinideAtom.category = 'lanthanide';
+            actinideAtom.group = NaN;
+            actinideAtom.period = NaN;
+            actinideAtom.xpos = NaN;
+            actinideAtom.ypos = NaN;
+            mappingResult[5].atoms.push(actinideAtom);           
         }
           break;
         case 7:
@@ -86,21 +86,22 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
       }
     }
 
+    this.createEmtpyAtom(mappingResult, 8); 
     return mappingResult;
   };
   
-  private newMethod(mappingResult: Period[], period: number) {
-    let LanthanideAtom = new Atom();
-    LanthanideAtom.atomic_mass = NaN;
-    LanthanideAtom.number = NaN;
-    LanthanideAtom.name = '';
-    LanthanideAtom.symbol = "";
-    LanthanideAtom.category = '';
-    LanthanideAtom.group = NaN;
-    LanthanideAtom.period = NaN;
-    LanthanideAtom.xpos = NaN;
-    LanthanideAtom.ypos = NaN;
-    mappingResult[period-1].atoms.push(LanthanideAtom);
+  private createEmtpyAtom(mappingResult: Period[], period: number) {
+    let emptyAtom = new Atom();
+    emptyAtom.atomic_mass = NaN;
+    emptyAtom.number = NaN;
+    emptyAtom.name = '';
+    emptyAtom.symbol = "";
+    emptyAtom.category = '';
+    emptyAtom.group = NaN;
+    emptyAtom.period = NaN;
+    emptyAtom.xpos = NaN;
+    emptyAtom.ypos = NaN;
+    mappingResult[period-1].atoms.push(emptyAtom);
   }
 
   //A function to create our array containing all our periods for the array. (The periods contain our atoms in the given period.)

@@ -1,4 +1,4 @@
-<div class="pt-cell" [ngClass]="atom.category" *ngIf="atom.symbol">
+<div class="pt-cell" [ngClass]="atom.category" *ngIf="atom.symbol != ''">
     <p class="cellNumb">{{atom.number}}</p>
     <h1 class="elementLetters text-center">{{atom.symbol}}</h1>
     <p class="elementInfo text-center">{{atom.atomic_mass}}</p>
