@@ -48,6 +48,7 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
             mappingResult[5].atoms.push(atom);
           }
           if (atom.number== 56) {
+            this.createEmtpyAtom(mappingResult, 9); 
             let actinideAtom = new Atom();
             actinideAtom.atomic_mass = NaN;
             actinideAtom.number = 57.71;
@@ -69,7 +70,8 @@ assignAtomsToPeriods(atoms: Atom[]): Period[]{
           } else {
             mappingResult[6].atoms.push(atom);
           }
-          if (atom.number== 89) {
+          if (atom.number== 88) { 
+            this.createEmtpyAtom(mappingResult, 10);
               let LanthanideAtom = new Atom();
               LanthanideAtom.atomic_mass = NaN;
               LanthanideAtom.number = 89.103;
